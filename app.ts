@@ -17,13 +17,6 @@ app.use(express.json());
 connectDB()
 
 
-interface RecipeData {
-  title?: string;
-  description?: string;
-  ingredients?: any[];  // You can specify the type more specifically if needed (e.g., string[] if ingredients are always strings)
-  steps?: any[];
-  category?: string;
-}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
