@@ -4,6 +4,7 @@ import connectDB from "./config/dbconnect";
 import bodyParser from "body-parser";
 import recipeRoutes from "./routes/recipeRoutes"; 
 import authRoutes from "./routes/authRoutes"
+import categoryRoutes from "./routes/category"
 
 
 dotenv.config(); 
@@ -21,7 +22,8 @@ connectDB()
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
-});
+}); 
 // Routes
-app.use("/api/recipes", recipeRoutes); 
-app.use("/api/user", authRoutes )
+app.use("/v1/recipes", recipeRoutes); 
+app.use("/v1/user", authRoutes )
+app.use("/v1/category", categoryRoutes)

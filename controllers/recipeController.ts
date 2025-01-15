@@ -59,7 +59,7 @@ export const getRecipes = async (req: Request, res: Response): Promise<void> => 
 }
 
 
-// API to  get recipe from name
+// API to  get recipe from recipeName
 export const getRecipeByName = async (req: Request, res: Response): Promise<void> => {
 
   try {

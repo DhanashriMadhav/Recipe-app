@@ -10,7 +10,7 @@ router.post("/create", validateToken, ValidateRequest (RecipeSchemaValidate), cr
 router.get("/AllRecipes",validateToken,  getRecipes )
 router.get("/recipeByName", validateToken, getRecipeByName)
 router.put("/updateRecipe/:id", validateToken,updateRecipeById)
-router.get("/getRecipesForUser",validateToken, getRecipesForUser)
+router.get("/getRecipesForUser/:userId",validateToken, getRecipesForUser)
 
 
 export default router;
